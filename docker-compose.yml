@@ -1,0 +1,10 @@
+services:
+  fastapi:
+    image: line-notify-by-fastapi
+    volumes:
+      - ./conf:/code/conf
+    environment:
+      TZ: "Asia/Tokyo"
+    ports:
+      - "8000:8000"
+    restart: always
