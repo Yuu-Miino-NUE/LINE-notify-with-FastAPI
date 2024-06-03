@@ -1,6 +1,7 @@
 # LINE Notify with FastAPI
 ## Description
 - LINE Notify via the request to the FastAPI server.
+- Authentication will be realized via your environment variable `.env`.
 - Docker image is available from this repository.
 
 ## Usage
