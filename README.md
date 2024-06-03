@@ -13,7 +13,7 @@ Refer to [LINE Notify](https://notify-bot.line.me/en/).
 
 ### Put the token
 The system uses the dotenv file in `conf` directory, i.e., `conf/.env`.
-```bash:conf/.env
+```conf
 LINE_NOTIFY_TOKEN="YOUR_TOKEN"
 ```
 
