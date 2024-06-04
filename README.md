@@ -21,7 +21,7 @@ LINE_NOTIFY_TOKEN="YOUR_TOKEN"
 ### Run the container
 For single service, run the container with the following command.
 ```bash
-docker run -v ./conf:/code/conf -d -p 80:80 line-notify-by-fastapi
+docker run -v ./conf:/code/conf -d -p 8000:8000 line-notify-by-fastapi
 ```
 
 For docker-compose, please refer to the `docker-compose.yml` file and combine it with your services.
@@ -44,7 +44,13 @@ Note that your `conf` directory should contain the `.env` file.
 ### Send a message
 For example, send a message with the cURL command.
 ```bash
-curl -X POST "http://localhost:8000/messages/" -d "message=Hello, LINE Notify!"
+curl -X 'POST' \
+  'http://localhost:8000/messages/' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "message": "test"
+}'
 ```
 
 Please refer to the automatically generated Swagger UI for more details.
